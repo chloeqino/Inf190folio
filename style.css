@@ -76,10 +76,12 @@ section#projects {
 }
 .project-card h3 {
   color: #5c5762;
+  font-weight: 600;
 }
 .project-card .description {
   line-height: 1.3;
   padding-top: 7px;
+  font-weight: 300;
 }
 .project-card footer {
   display: flex;
@@ -105,6 +107,7 @@ ul.keywords {
   list-style-position: inside;
   color: #6d6d72;
   font-size: 0.9em;
+  font-weight: 200;
 }
 ul.keywords li {
   display: list-item;
