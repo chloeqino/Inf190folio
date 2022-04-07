@@ -155,3 +155,7 @@ footer.main .frame {
   transform-origin: bottom;
   width: 100%;
 }
+.wavyborder svg {
+  position: relative;
+  top: 1px;
+}
