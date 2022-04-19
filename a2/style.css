@@ -17,9 +17,7 @@ body {
   background-color: rgb(123, 82, 235);
   color: white;
 }
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
+
 input[type="range"] {
   overflow: hidden;
 }
