@@ -1,0 +1,52 @@
+#windchimes {
+  display: table;
+  margin: 0 auto;
+}
+body {
+  font-family: sans-serif;
+}
+.controls {
+  display: table;
+  margin: 5px auto;
+}
+#des {
+  display: table;
+  margin: 5px auto;
+}
+#on {
+  background-color: rgb(123, 82, 235);
+  color: white;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type="range"] {
+  overflow: hidden;
+}
+.chime:hover {
+  filter: brightness(1.05);
+}
+.chime {
+  filter: brightness(1);
+  width: 100px;
+  animation-duration: 1s;
+  transform: rotateZ(0);
+  transform-origin: top center;
+  margin: 2px 2em;
+}
+.chime.animated {
+  filter: brightness(1.05);
+  animation: swaying 1s ease-in-out infinite;
+}
+@keyframes swaying {
+  0% {
+    transform: rotateZ(25deg);
+  }
+
+  50% {
+    transform: rotateZ(-25deg);
+  }
+  100% {
+    transform: rotateZ(25deg);
+  }
+}

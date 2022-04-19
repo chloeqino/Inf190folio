@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Wind Chime</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="des">click on each wind chime to play/pause sound</div>
+    <div class="controls">
+      <div id="onOffbtns">
+        <button id="on" onclick="playAll()">Play All</button>
+        <button onclick="pauseAll()">Pause All</button>
+      </div>
+      <input
+        type="range"
+        name="volume"
+        min="0"
+        max="100"
+        value="60"
+        step="1"
+        oninput="setVolume(this.value)"
+      />
+    </div>
+    <div id="windchimes">
+      <img src="assets/windchime.png" class="chime" onclick="onOff(0)" />
+      <img src="assets/windchime.png" class="chime" onclick="onOff(1)" />
+      <img src="assets/windchime.png" class="chime" onclick="onOff(2)" />
+    </div>
+    <script>
+      let windchimesContainer = document.getElementById("windchimes");
+      let chimeimg = document.getElementsByClassName("chime");
+      let n = 3;
+      let volume = 0.6;
+      let audios = [
+        new Audio("assets/Wind-chimes-sound.mp3"),
+        new Audio("assets/Wind-chimes-sound.mp3"),
+        new Audio("assets/Wind-chimes-sound.mp3"),
+      ];
+
+      let nextindex = 0;
+      let on = [false, false, false];
+      function setVolume(v = volume) {
+        for (let i = 0; i < audios.length; i++) {
+          audios[i].volume = v * 0.01;
+        }
+      }
+      function playAll() {
+        for (let i = 0; i < n; i++) {
+          if (on[i]) {
+            continue;
+          }
+          setTimeout(() => {
+            onOff(i);
+          }, i * 100);
+        }
+      }
+      function pauseAll() {
+        for (let i = 0; i < n; i++) {
+          if (!on[i]) {
+            continue;
+          }
+
+          onOff(i);
+        }
+      }
+      function onOff(i = 0) {
+        if (!on[i]) {
+          audios[i].play();
+          audios[i].volume = volume;
+          chimeimg[i].classList.add("animated");
+          on[i] = true;
+        } else {
+          audios[i].pause();
+          audios[i].currentTime = 0;
+          chimeimg[i].classList.remove("animated");
+          on[i] = false;
+        }
+      }
+    </script>
+  </body>
+</html>
