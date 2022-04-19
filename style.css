@@ -98,7 +98,18 @@ section#projects {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
-.project-card .download:hover {
+.project-card .demo {
+  color: #7340a0;
+  text-decoration: none;
+  display: inline-table;
+  background: #f5eefd;
+  border-radius: 15px;
+  padding: 0.4em 0.8em;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.project-card .download:hover,
+.demo:hover {
   background: transparent;
   text-decoration: underline;
 }

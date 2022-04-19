@@ -43,6 +43,7 @@
       function setVolume(v = volume) {
         for (let i = 0; i < audios.length; i++) {
           audios[i].volume = v * 0.01;
+          volume = v * 0.01;
         }
       }
       function playAll() {
