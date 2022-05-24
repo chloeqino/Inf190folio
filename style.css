@@ -98,6 +98,18 @@ section#projects {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
+.description.report {
+  padding-bottom: 10px;
+}
+.description.report ul {
+  list-style-position: inside;
+  list-style-type: circle;
+}
+.description.report h4 {
+  color: #877fde;
+  margin-top: 9px;
+  font-weight: 600;
+}
 .project-card .demo {
   color: #7340a0;
   text-decoration: none;
