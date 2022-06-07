@@ -25,6 +25,10 @@ header#main {
     #f8e9fd 60.83%
   );
 }
+a#downloadpdf {
+  font-weight: 500;
+  color: #5c11d6;
+}
 header#main h1 {
   font-size: 2em;
   background: linear-gradient(189.8deg, #7f7ec7 2.64%, #917ec7 36.19%);
